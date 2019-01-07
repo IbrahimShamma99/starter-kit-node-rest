@@ -1,4 +1,4 @@
-# Rest API boilerplate using Koa2 & ES2017
+# Rest API boilerplate using Koa
 
 [![CircleCI](https://img.shields.io/circleci/project/github/pranavpr/koa2-es2017-api-boilerplate/master.svg?label=circle&maxAge=43200)](https://circleci.com/gh/pranavpr/koa2-es2017-api-boilerplate)
 [![Coverage Status](https://img.shields.io/codecov/c/github/pranavpr/koa2-es2017-api-boilerplate/master.svg?maxAge=43200)](https://codecov.io/gh/pranavpr/koa2-es2017-api-boilerplate)
@@ -19,6 +19,13 @@ Make sure you read the FAQ for more details and info.
 - Testing with [Jest](https://facebook.github.io/jest/).
 - Type checking with [Typescript](https://www.typescriptlang.org/)
 
+
+## Setup
+Install the following toolchain:
+- NodeJS
+- Yarn
+- Jest
+
 ## Getting started
 
 ```sh
@@ -27,9 +34,6 @@ git clone git@github.com:murcul/starter-rest-api.git
 cd starter-rest-api
 
 # Install dependencies
-npm install
-
-# or if you're using Yarn
 yarn
 ```
 
