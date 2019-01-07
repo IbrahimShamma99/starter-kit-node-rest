@@ -1,15 +1,33 @@
 import * as request from 'supertest';
-import server from '../src';
+import pendingServer from '../src/api';
 
+let server: any;
 afterEach(() => {
   server.close();
 });
 
+beforeEach(async () => {
+  server = await pendingServer;
+});
+
 describe('GET /', () => {
-  it('should render application name and version', async () => {
+  it('should render frontend landing page of the app', async () => {
     await request(server)
       .get('/')
-      .expect(200);
+      .expect(200)
+      .expect('Content-Type', /html/)
+      .then(function(res) {
+        expect(res.text).toContain('Hello World');
+      });
+  });
+});
+
+describe('GET /api', () => {
+  it('should render application name and version', async () => {
+    await request(server)
+      .get('/api')
+      .expect(200)
+      .expect('Content-Type', /json/);
   });
 });
 

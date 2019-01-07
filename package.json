@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "Rest API boilerplate using Koa2 and ES2017",
   "author": "Pranav Prakash <pranav@pranavprakash.net>",
-  "main": "dist/index.js",
+  "main": "dist/src/api/index.js",
   "engines": {
-    "node": "~8.5.0",
+    "node": "~8.9.0",
     "npm": ">=5.3.0"
   },
   "scripts": {
-    "start": "node dist/src/index.js",
-    "start:dev": "nodemon --watch dist ./dist/src/index.js",
+    "start": "node dist/src/api/index.js",
+    "start:dev": "nodemon --watch ./dist/src/api ./dist/src/api/index.js",
     "dev": "npm run build:watch & npm run start:dev",
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
@@ -52,10 +52,14 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-morgan": "^1.0.1",
-    "koa-router": "^7.2.1"
+    "koa-router": "^7.2.1",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@types/jest": "^23.3.3",
+    "@types/next": "^7.0.6",
     "concurrently": "^4.0.1",
     "dotenv": "^4.0.0",
     "husky": "^1.1.0",
@@ -86,6 +90,7 @@
     "moduleFileExtensions": [
       "ts",
       "tsx",
+      "json",
       "js"
     ],
     "transform": {
