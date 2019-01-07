@@ -16,8 +16,8 @@ describe('GET /', () => {
       .get('/')
       .expect(200)
       .expect('Content-Type', /html/)
-      .expect(function(res) {
-        res.body.should.have('Hello World!!');
+      .then(function(res) {
+        expect(res.text).toContain('Hello World');
       });
   });
 });
