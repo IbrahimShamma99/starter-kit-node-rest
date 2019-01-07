@@ -2,7 +2,6 @@ import * as Koa from 'koa';
 import * as cors from '@koa/cors';
 import * as logger from 'koa-morgan';
 import * as bodyParser from 'koa-bodyparser';
-import router from './routes';
 
 const app: Koa = new Koa();
 
@@ -41,8 +40,5 @@ app.use(async (ctx: Koa.Context, next: () => Promise<any>) => {
     ctx.app.emit('error', err, ctx);
   }
 });
-
-// Routes
-app.use(router.routes());
 
 export default app;

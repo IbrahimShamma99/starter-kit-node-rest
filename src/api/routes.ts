@@ -1,6 +1,6 @@
 import * as Koa from 'koa';
 import * as Router from 'koa-router';
-import * as pkgJson from '../package.json';
+import * as pkgJson from '../../package.json';
 
 const router: Router = new Router();
 const appName: string = pkgJson.name;
