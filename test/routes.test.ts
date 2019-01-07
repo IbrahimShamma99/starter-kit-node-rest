@@ -11,10 +11,23 @@ beforeEach(async () => {
 });
 
 describe('GET /', () => {
-  it('should render application name and version', async () => {
+  it('should render frontend landing page of the app', async () => {
     await request(server)
       .get('/')
-      .expect(200);
+      .expect(200)
+      .expect('Content-Type', /html/)
+      .expect(function(res) {
+        res.body.should.have('Hello World!!');
+      });
+  });
+});
+
+describe('GET /api', () => {
+  it('should render application name and version', async () => {
+    await request(server)
+      .get('/api')
+      .expect(200)
+      .expect('Content-Type', /json/);
   });
 });
 
