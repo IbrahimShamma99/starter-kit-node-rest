@@ -90,6 +90,7 @@
     "moduleFileExtensions": [
       "ts",
       "tsx",
+      "json",
       "js"
     ],
     "transform": {

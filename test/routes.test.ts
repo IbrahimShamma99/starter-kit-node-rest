@@ -1,8 +1,13 @@
 import * as request from 'supertest';
-import server from '../src';
+import pendingServer from '../src/api';
 
+let server: any;
 afterEach(() => {
   server.close();
+});
+
+beforeEach(async () => {
+  server = await pendingServer;
 });
 
 describe('GET /', () => {

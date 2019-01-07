@@ -13,7 +13,7 @@ dotenv.config();
 
 const PORT: number = parseInt(<string>process.env['PORT'], 10) || 8099;
 
-app.prepare().then(() => {
+export default app.prepare().then(() => {
   const router = new Router();
   router.use('/api', apiRouter.routes());
   router.get('*', async ctx => {
@@ -26,7 +26,7 @@ app.prepare().then(() => {
     await next();
   });
   server.use(router.routes());
-  server.listen(PORT, () => {
+  return server.listen(PORT, () => {
     console.log(`> Ready on http://localhost:${PORT}`);
   });
 });
