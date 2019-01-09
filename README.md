@@ -1,4 +1,4 @@
-# NodeJS Starter Kit with NextJS and KoaJS
+# NodeJS Starter Kit powered by Next & Koa
 
 [NextJS](https://nextjs.org) provides the fastest and performant way to build server rendered React pages from NodeJS. [Koa](https://koajs.com) is a beautiful library from the authors of ExpressJS to build APIs in NodeJS through promises and clean design. 
 
@@ -77,3 +77,6 @@ will start the compiled application from the `/dist` folder.
 
 ## License
 MIT License. See the [LICENSE](LICENSE) file.
+
+
+Made with <3 at [Murcul](https://www.murcul.com)
