@@ -53,6 +53,7 @@
     "koa-bodyparser": "^4.2.0",
     "koa-morgan": "^1.0.1",
     "koa-router": "^7.2.1",
+    "koa-swagger-decorator": "^1.5.14",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
