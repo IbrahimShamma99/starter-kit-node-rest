@@ -75,6 +75,10 @@ npm start
 
 will start the compiled application from the `/dist` folder.
 
+### Documentation
+
+Available at ```http://localhost:8099/doc```
+
 ## License
 MIT License. See the [LICENSE](LICENSE) file.
 

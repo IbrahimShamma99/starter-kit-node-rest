@@ -6,9 +6,8 @@ swaggerRouter.swagger({
   title: 'Example Server',
   description: 'API DOC',
   version: '1.0.0',
-  prefix: '/api',
-  swaggerHtmlEndpoint: '/swagger-html',
-  swaggerJsonEndpoint: '/swagger-json',
+  prefix: '/doc',
+  swaggerHtmlEndpoint: '/',
   swaggerConfiguration: {
     display: {
       defaultModelsExpandDepth: 4,
