@@ -2,9 +2,7 @@ import * as Koa from 'koa';
 import * as cors from '@koa/cors';
 import * as logger from 'koa-morgan';
 import * as bodyParser from 'koa-bodyparser';
-import * as swagger from 'swagger2';
-import { ui } from 'swagger2-koa';
-import router from './routes';
+import router from './router';
 
 const app: Koa = new Koa();
 
@@ -46,9 +44,5 @@ app.use(async (ctx: Koa.Context, next: () => Promise<any>) => {
 
 // Routes
 app.use(router.routes());
-
-// Swagger UI
-const document = swagger.loadDocumentSync('./swagger.yml');
-app.use(ui(document, '/swagger'));
 
 export default app;

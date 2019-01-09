@@ -9,8 +9,8 @@
     "npm": ">=5.3.0"
   },
   "scripts": {
-    "start": "node dist/src/index.js",
-    "start:dev": "nodemon --watch dist ./dist/src/index.js",
+    "start": "node dist/index.js",
+    "start:dev": "nodemon --watch dist ./dist/index.js",
     "dev": "npm run build:watch & npm run start:dev",
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
@@ -53,8 +53,7 @@
     "koa-bodyparser": "^4.2.0",
     "koa-morgan": "^1.0.1",
     "koa-router": "^7.2.1",
-    "swagger2": "^1.0.4",
-    "swagger2-koa": "^1.0.3"
+    "koa-swagger-decorator": "^1.5.13"
   },
   "devDependencies": {
     "@types/jest": "^23.3.3",

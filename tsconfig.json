@@ -1,26 +1,17 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "lib": ["es5", "es6"],
+    "lib": ["es6"],
+    "types": ["node"],
     "target": "es6",
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "strict": true,
-    "baseUrl": ".",
     "pretty": true,
-    "declaration": true,
-    "skipLibCheck": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "resolveJsonModule": true
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "test"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "test"]
 }
