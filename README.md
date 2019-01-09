@@ -1,23 +1,15 @@
-# Rest API boilerplate using Koa
+# NodeJS Starter Kit powered by Next & Koa
 
-[![CircleCI](https://img.shields.io/circleci/project/github/pranavpr/koa2-es2017-api-boilerplate/master.svg?label=circle&maxAge=43200)](https://circleci.com/gh/pranavpr/koa2-es2017-api-boilerplate)
-[![Coverage Status](https://img.shields.io/codecov/c/github/pranavpr/koa2-es2017-api-boilerplate/master.svg?maxAge=43200)](https://codecov.io/gh/pranavpr/koa2-es2017-api-boilerplate)
-[![dependency Status](https://david-dm.org/pranavpr/koa2-es2017-api-boilerplate.svg)](https://david-dm.org/pranavpr/koa2-es2017-api-boilerplate)
-[![devDependency Status](https://david-dm.org/pranavpr/koa2-es2017-api-boilerplate/dev-status.svg)](https://david-dm.org/pranavpr/koa2-es2017-api-boilerplate?type=dev)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[NextJS](https://nextjs.org) provides the fastest and performant way to build server rendered React pages from NodeJS. [Koa](https://koajs.com) is a beautiful library from the authors of ExpressJS to build APIs in NodeJS through promises and clean design. 
 
-
-An opinionated starter project for creating RESTful APIs using Koa2, Typescript, and ES2017+ features in a Node.js server environment as well as providing code formatting and testing support. It provides the setup for compiling, formatting and testing your code but doesn't make any further assumptions on how your project should be structured.
-
-Make sure you read the FAQ for more details and info.
-
-### Features:
-- [Koa](http://koajs.com/) as the web framework.
-- ES2017+ support with [Babel](https://babeljs.io/).
-- Automatic polyfill requires based on environment with [babel-preset-env](https://github.com/babel/babel-preset-env).
-- Linting with [ESLint](http://eslint.org/).
-- Testing with [Jest](https://facebook.github.io/jest/).
+It also builds on top of both and adds support for:
 - Type checking with [Typescript](https://www.typescriptlang.org/)
+- Testing with [Jest](https://facebook.github.io/jest/)
+- Full Swagger Docs generation through [Koa Swagger Decorators](https://github.com/Cody2333/koa-swagger-decorator)
+- Auto reloading support through [nodemon](https://nodemon.io/)
+- Environment Variable management through [dotenv](https://www.npmjs.com/package/dotenv)
+- JavaScript auto formatting through [Prettier](https://prettier.io)
+- CircleCI build config for running tests in CI
 
 
 ## Setup
@@ -85,3 +77,6 @@ will start the compiled application from the `/dist` folder.
 
 ## License
 MIT License. See the [LICENSE](LICENSE) file.
+
+
+Made with <3 at [Murcul](https://www.murcul.com)
