@@ -32,8 +32,7 @@ yarn
 Then you can begin development:
 
 ```sh
-npm run build
-npm run start
+npm run dev
 ```
 
 This will launch a [nodemon](https://nodemon.io/) process for automatic server restarts when your code changes.
