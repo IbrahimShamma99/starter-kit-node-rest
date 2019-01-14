@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "Rest API boilerplate using Koa2 and ES2017",
   "author": "Pranav Prakash <pranav@pranavprakash.net>",
-  "main": "dist/src/api/index.js",
+  "main": "dist/api/index.js",
   "engines": {
     "node": "~8.9.0",
     "npm": ">=5.3.0"
   },
   "scripts": {
-    "start": "node dist/src/api/index.js",
-    "start:dev": "nodemon --watch ./dist/src/api ./dist/src/api/index.js",
+    "start": "node dist/api/index.js",
+    "start:dev": "nodemon --watch ./dist/api ./dist/api/index.js",
     "dev": "npm run build:watch & npm run start:dev",
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",

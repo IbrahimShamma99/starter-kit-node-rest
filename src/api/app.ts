@@ -42,7 +42,7 @@ app.use(async (ctx: Koa.Context, next: () => Promise<any>) => {
   }
 });
 
-// Routes
+// Add router (API)
 app.use(router.routes());
 
 export default app;

@@ -1,7 +1,7 @@
 import * as Router from 'koa-router';
-import swaggerRouter from './swaggerRouter';
+import apiRouter from './apiRouter';
 
 const router = new Router();
-router.use('/doc', swaggerRouter.routes());
+router.use('/api', apiRouter.routes());
 
 export default router;

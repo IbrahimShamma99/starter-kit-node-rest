@@ -9,67 +9,66 @@ import {
 } from 'koa-swagger-decorator';
 
 const tag = tags(['User']);
-
 const userSchema = {
-  name: { type: 'string', required: true },
+  username: { type: 'string', required: true },
   password: { type: 'string', required: true },
 };
-
 const logTime = () => async (ctx, next) => {
   console.log(`start: ${new Date()}`);
   await next();
   console.log(`end: ${new Date()}`);
 };
-export default class UserRouter {
+
+export default class User {
   @request('POST', '/user/register')
-  @summary('register user')
-  @description('example of api')
+  @summary('Register user')
+  @description('Sample API')
   @tag
   @middlewares([logTime()])
   @body(userSchema)
   static async register(ctx) {
-    const { name } = ctx.validatedBody;
-    const user = { name };
+    const { username } = ctx.validatedBody;
+    const user = { username };
     ctx.body = { user };
   }
 
   @request('post', '/user/login')
-  @summary('user login, password is 123456')
+  @summary('User login. The password is 123456')
   @tag
   @body(userSchema)
   static async login(ctx) {
-    const { name, password } = ctx.validatedBody;
-    if (password !== '123456') throw new Error('wrong password');
-    const user = { name };
+    const { username, password } = ctx.validatedBody;
+    if (password !== '123456') throw new Error('Wrong password!');
+    const user = { username };
     ctx.body = { user };
   }
 
   @request('get', '/user')
-  @summary('user list')
+  @summary('User list')
   @tag
   static async getAll(ctx) {
-    const users = [{ name: 'foo' }, { name: 'bar' }];
+    const users = [{ username: 'foo' }, { username: 'bar' }];
     ctx.body = { users };
   }
 
   @request('get', '/user/{id}')
-  @summary('get user by id')
+  @summary('Get user by ID')
   @tag
   @path({ id: { type: 'string', required: true } })
   static async getOne(ctx) {
     const { id } = ctx.validatedParams;
-    console.log('id:', id);
-    const user = { name: 'foo' };
+    console.log('ID: ', id);
+    const user = { username: 'foo' };
     ctx.body = { user };
   }
 
   @request('DELETE', '/user/{id}')
-  @summary('delete user by id')
+  @summary('Delete user by id')
   @tag
   @path({ id: { type: 'string', required: true } })
   static async deleteOne(ctx) {
     const { id } = ctx.validatedParams;
-    console.log('id:', id);
-    ctx.body = { msg: 'success' };
+    console.log('ID: ', id);
+    ctx.body = { msg: 'Success!' };
   }
 }
