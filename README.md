@@ -1,8 +1,9 @@
 # NodeJS Starter Kit powered by Next & Koa
 
-[NextJS](https://nextjs.org) provides the fastest and performant way to build server rendered React pages from NodeJS. [Koa](https://koajs.com) is a beautiful library from the authors of ExpressJS to build APIs in NodeJS through promises and clean design. 
+[NextJS](https://nextjs.org) provides the fastest and performant way to build server rendered React pages from NodeJS. [Koa](https://koajs.com) is a beautiful library from the authors of ExpressJS to build APIs in NodeJS through promises and clean design.
 
 It also builds on top of both and adds support for:
+
 - Type checking with [Typescript](https://www.typescriptlang.org/)
 - Testing with [Jest](https://facebook.github.io/jest/)
 - Full Swagger Docs generation through [Koa Swagger Decorators](https://github.com/Cody2333/koa-swagger-decorator)
@@ -11,9 +12,10 @@ It also builds on top of both and adds support for:
 - JavaScript auto formatting through [Prettier](https://prettier.io)
 - CircleCI build config for running tests in CI
 
-
 ## Setup
+
 Install the following toolchain:
+
 - NodeJS
 - Yarn
 - Jest
@@ -75,8 +77,12 @@ npm start
 
 will start the compiled application from the `/dist` folder.
 
+### Documentation
+
+Available at `http://localhost:8099/api/doc`
+
 ## License
+
 MIT License. See the [LICENSE](LICENSE) file.
 
-
-Made with <3 at [Murcul](https://www.murcul.com)
+Made with 💖 at [Murcul](https://www.murcul.com)

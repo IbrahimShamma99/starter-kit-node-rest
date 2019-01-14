@@ -1,4 +1,5 @@
 import React from 'react';
+
 export default () => {
-  return <h3>Hello World!!</h3>;
+  return <h1>Hello, world!</h1>;
 };
